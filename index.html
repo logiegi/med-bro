@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Express Diagnostic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --bg: radial-gradient(circle at top, #0f172a, #020617);
+        --card: rgba(255, 255, 255, 0.04);
+        --border: rgba(255, 255, 255, 0.08);
+        --accent: #38bdf8;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--bg);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        backdrop-filter: blur(20px);
+        padding: 2.4rem 2.8rem;
+        border-radius: 1.5rem;
+        text-align: center;
+        max-width: 520px;
+        width: min(90vw, 520px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      }
+      h1 {
+        margin: 0 0 1rem;
+        color: #fff;
+        font-size: clamp(1.8rem, 3vw, 2.1rem);
+        letter-spacing: -0.02em;
+      }
+      p {
+        margin: 0 0 1.5rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      a.link {
+        display: inline-flex;
+        gap: 0.4rem;
+        align-items: center;
+        justify-content: center;
+        background: rgba(56, 189, 248, 0.12);
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        color: #e2f3ff;
+        text-decoration: none;
+        padding: 0.75rem 1.3rem;
+        border-radius: 999px;
+        font-weight: 600;
+        transition: 0.15s ease-out;
+        word-break: break-all;
+      }
+      a.link:hover {
+        background: rgba(56, 189, 248, 0.3);
+        transform: translateY(-1px);
+      }
+      .badge {
+        display: inline-flex;
+        gap: 0.4rem;
+        align-items: center;
+        padding: 0.25rem 0.6rem;
+        background: rgba(15, 118, 255, 0.14);
+        border: 1px solid rgba(148, 163, 184, 0.13);
+        color: #cbd5f5;
+        border-radius: 999px;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 1rem;
+      }
+      footer {
+        margin-top: 1.25rem;
+        font-size: 0.7rem;
+        color: rgba(226, 232, 240, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="badge">Наш сайт</div>
+      <h1>Express Diagnostic</h1>
+      <p>Переходи по ссылке, чтобы открыть сайт:</p>
+      <a class="link" href="https://express-diagnostic.ru" target="_blank" rel="noopener noreferrer">
+        https://express-diagnostic.ru
+        <span aria-hidden="true">↗</span>
+      </a>
+      <footer>Открывается в новой вкладке</footer>
+    </main>
+  </body>
+</html>
